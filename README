@@ -1,0 +1,10 @@
+Before installing those samples please make sure that Maven and git have been installed and configured properly on your local system.
+
+You can then do:
+
+git clone git@github.com:michaelisvy/hibernate-4-spring-3.1-samples.git
+cd hibernate-4-spring-3.1-samples
+mvn eclipse:eclipse
+
+You can than import this project into Eclipse.
+File -> Import -> Existing project into Eclipse
