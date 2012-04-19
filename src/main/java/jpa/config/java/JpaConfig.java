@@ -4,7 +4,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 import org.hibernate.ejb.HibernatePersistence;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -20,9 +19,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class JpaConfig {
 
-	@Autowired
-	private DataSource dataSource;
-
 	@Bean
 	public EntityManagerFactory entityManagerFactory() {
 
@@ -37,7 +33,7 @@ public class JpaConfig {
 	@Bean
 	public PlatformTransactionManager transactionManager() {
 		JpaTransactionManager transactionManager = new JpaTransactionManager(entityManagerFactory());
-		transactionManager.setDataSource(dataSource);
+		transactionManager.setDataSource(datasource());
 		transactionManager.setJpaDialect(new HibernateJpaDialect());
 		return transactionManager;
 	}
