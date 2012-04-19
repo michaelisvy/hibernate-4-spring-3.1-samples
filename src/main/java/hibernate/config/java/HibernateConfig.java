@@ -3,7 +3,6 @@ package hibernate.config.java;
 import javax.sql.DataSource;
 
 import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -18,12 +17,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class HibernateConfig {
 	
-	@Autowired
-	private DataSource dataSource;
 	
 	@Bean
 	public SessionFactory sessionFactory() {
-	 return new LocalSessionFactoryBuilder(dataSource)
+	 return new LocalSessionFactoryBuilder(datasource())
 	 .addAnnotatedClasses(Account.class)
 	 .buildSessionFactory();
 	}
