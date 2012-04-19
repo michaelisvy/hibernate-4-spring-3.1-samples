@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
-		<config>src/main/java/hibernate/config/config-spring-hibernate.xml</config>
+		<config>src/main/java/hibernate/config/xml/config-spring-hibernate.xml</config>
 	</configs>
 	<configSets>
 	</configSets>
