@@ -38,7 +38,22 @@
 					</sourceIncludes>
 				</configuration>
 			</plugin>
+			<!-- Configuration which allows JUnit tests to be placed in the same folder as java files -->
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <testSourceDirectory>${basedir}/src/main/java/</testSourceDirectory>
+                    <testClassesDirectory>${project.build.directory}/classes/</testClassesDirectory>
+                </configuration>
+            </plugin>
 		</plugins>
+		<!-- Configuration which allows configuration files (such as xml files) to be placed in the same folder as java files -->
+		<resources>
+      		<resource>
+        		<directory>${basedir}/src/main/java/</directory>
+      		</resource>
+    	</resources>
 	</build>
 
 
@@ -119,10 +134,8 @@
 
 		<dependency>
 			<groupId>junit</groupId>
-			<artifactId>junit
-				</artifactId>
+			<artifactId>junit</artifactId>
 			<version>4.10</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
