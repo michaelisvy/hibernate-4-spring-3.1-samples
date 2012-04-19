@@ -1,4 +1,4 @@
-package hibernate.config;
+package hibernate.config.java;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="config-spring-hibernate.xml")
+@ContextConfiguration(classes=HibernateConfig.class)
 @DirtiesContext
 public class HibernateConfigTest {
 	
