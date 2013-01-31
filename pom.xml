@@ -11,7 +11,7 @@
 
 	<properties>
 		<maven.test.failure.ignore>true</maven.test.failure.ignore>
-		<spring.framework.version>3.1.1.RELEASE</spring.framework.version>
+		<spring.framework.version>3.2.0.RELEASE</spring.framework.version>
 		<hibernate.version>4.1.1.Final</hibernate.version>
 		<sl4j.version>1.5.6</sl4j.version>
 	</properties>
@@ -120,13 +120,6 @@
 			<version>1.2.126</version>
 		</dependency>
 
-
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib</artifactId>
-			<version>2.2.2</version>
-			<scope>runtime</scope>
-		</dependency>
 
 		<!-- ********************************************************************** 
 			** TEST DEPENDENCIES 
