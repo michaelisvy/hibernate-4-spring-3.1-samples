@@ -14,7 +14,7 @@
 		<spring.framework.version>3.2.0.RELEASE</spring.framework.version>
 		<hibernate.version>4.1.9.Final</hibernate.version>
 		<sl4j.version>1.7.2</sl4j.version>
-		<junit.version>4.11</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<hsqldb.version>2.2.9</hsqldb.version>
 	</properties>
 
